@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+  <script src="script.js" defer></script>
+  <title>Cultural Cook Book</title>
+</head>
+
+<body>
+  <header>
+    <div class="nav-wrapper">
+      <a href="#"><img src=" /assets/logo.svg" alt="logo"></a>
+      <nav class="desktop-nav">
+        <a href="#">Home</a>
+        <a href="./colombia">Colombia</a>
+        <a href="./south-africa">South Africa</a>
+        <a href="./britain">Britain</a>
+        <a href="./my-favourite-recipes">My Favourite Recipes</a>
+      </nav>
+      <div class="burger" onclick="transformBurgerToX(this)">
+        <div class="burger-line1"></div>
+        <div class="burger-line2"></div>
+        <div class="burger-line3"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1>Cultural Cook Book</h1>
+
+    <section class="introduction">
+      <div class="intro">
+        <img src="/assets/cooking_lyxy.svg">
+        <p>Experience culture through recipes!</p>
+      </div>
+    </section>
+
+
+    <section class="countries-section">
+      <div class="country-card colombia">
+        <h2 class="country-card-title">Colombia</h2>
+        <a class="card-overlay" href="#">
+        </a>
+      </div>
+      <div class="country-card south-africa">
+        <h2 class="country-card-title">South Africa</h2>
+        <a class="card-overlay" href="#">
+        </a>
+      </div>
+      <div class="country-card britain">
+        <h2 class="country-card-title">Britain</h2>
+        <a class="card-overlay" href="">
+        </a>
+      </div>
+
+    </section>
+
+
+
+    <section class="recipes-section">
+      <h1>Top Recipes</h1>
+      <div class="filter-buttons-container">
+        <button id="vegetarian-button">Vegetarian</button>
+        <button id="vegan-button">Vegan</button>
+        <button id="meat-button">Meat</button>
+      </div>
+
+
+      <div id="vegetarian">
+        <h2>Vegetarian</h2>
+        <div class="recipe-card recipe1">
+          <h2>Recipe Name</h2>
+          <a class="card-overlay" href="">
+          </a>
+          <p class="card-label">Vegetarian</p>
+        </div>
+        <div class="recipe-card recipe1">
+          <h2>Recipe Name</h2>
+          <a class="card-overlay" href="">
+          </a>
+          <p class="card-label">Vegetarian</p>
+        </div>
+      </div>
+
+      <div id="vegan" class="hide">
+        <h2>Vegan</h2>
+        <div class="recipe-card recipe1">
+          <h2>Recipe Name</h2>
+          <a class="card-overlay" href="">
+          </a>
+          <p class="card-label">Vegan</p>
+        </div>
+        <div class="recipe-card recipe1">
+          <h2>Recipe Name</h2>
+          <a class="card-overlay" href="">
+          </a>
+          <p class="card-label">Vegan</p>
+        </div>
+      </div>
+
+      <div id="meat" class="hide">
+        <h2>Meat</h2>
+        <div class="recipe-card recipe1">
+          <h2>Recipe Name</h2>
+          <a class="card-overlay" href="">
+          </a>
+          <p class="card-label">Meat</p>
+        </div>
+        <div class="recipe-card recipe1">
+          <h2>Recipe Name</h2>
+          <a class="card-overlay" href="">
+          </a>
+          <p class="card-label">Meat</p>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+  <div class="mobile-nav hide">
+  </div>
+  <footer class="footer">
+    <img src="/assets/facebook.svg">
+    <img src="/assets/instagram.svg">
+    <img src="/assets/twitter.svg">
+    <img src="/assets/youtube.svg">
+    <p>&#169 Copyright</p>
+  </footer>
+
+
+
+</body>
+
+</html>

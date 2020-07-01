@@ -1,0 +1,278 @@
+:root {
+  --grey: #50514F;
+  --green: #70FFAE;
+  --yellow: #FFEC5C;
+  --white: #FDFFF7;
+  --middle-red: #D7907B;
+}
+
+html,
+body {
+  background-color: var(--white);
+}
+
+main {
+  margin-top: 15vh;
+}
+
+h1,
+h2,
+h3,
+a,
+button {
+  font-family: "Futura", "Open Sans", sans-serif;
+  font-weight: normal;
+  color: var(--grey);
+}
+
+p,
+span {
+  font-family: "Futura", "Open Sans", sans-serif;
+  font-weight: normal;
+  color: var(--grey);
+}
+
+
+header {}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 -5px 15px -1px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  background-color: var(--white);
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  position: relative;
+  height: 100vh;
+  background-color: var(--green);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+/* transform mobile burger to X */
+
+.transform .burger-line1 {
+  /* -webkit- adds safari support*/
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.transform .burger-line2 {
+  opacity: 0;
+}
+
+.transform .burger-line3 {
+  /* -webkit- adds safari support*/
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.burger {
+  width: 25px;
+  height: auto;
+  padding: 10px 25px 0;
+}
+
+.burger-line1,
+.burger-line2,
+.burger-line3 {
+  width: 100%;
+  height: 2px;
+  margin: 6px 0;
+  background-color: black;
+  transition: .5s;
+}
+
+main h1 {
+  text-align: center;
+}
+
+.introduction {
+  text-align: center;
+  text-justify: center;
+  color: white;
+  padding: 0 40px;
+}
+
+.intro img {
+  width: 30%;
+  object-fit: contain;
+
+}
+
+.countries-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.countries-section.country-link {
+  width: auto;
+}
+
+
+.country-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+}
+
+.card-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+
+.country-card h2 {
+  color: var(--white);
+  z-index: 10;
+}
+
+.country-card.colombia {
+  background: url('/assets/colombia.jpg') no-repeat;
+  background-size: cover;
+}
+
+.country-card.south-africa {
+  background: url('/assets/colombia.jpg') no-repeat;
+  background-size: cover;
+}
+
+.country-card.britain {
+  background: url('/assets/colombia.jpg') no-repeat;
+  background-size: cover;
+}
+
+.recipes-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#vegetarian,
+#vegan,
+#meat {
+  width: 80%;
+}
+
+.recipe-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 15px 0;
+}
+
+.recipe-card .card-overlay {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.recipe-card h2 {
+  z-index: 10;
+}
+
+.recipe-card.recipe1 {
+  background: url('/assets/dish.jpg') no-repeat;
+  background-size: cover;
+}
+
+
+.card-label {
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+#meat .recipe-card .card-label {
+  background-color: var(--middle-red);
+  color: var(--white);
+}
+
+#vegetarian .recipe-card .card-label {
+  background-color: var(--yellow);
+  color: var(--grey);
+}
+
+#vegan .recipe-card .card-label {
+  background-color: var(--green);
+  color: var(--grey);
+}
+
+/* .recipes-section {
+  background-color: cadetblue;
+} */
+
+
+.filter-buttons-container {
+  border-bottom: 1px solid var(--grey);
+  padding-bottom: 30px;
+}
+
+
+button {
+  background-color: var(--green);
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: none;
+  outline-style: none;
+}
+
+button:active {
+  background-color: var(--green);
+  opacity: 0.9;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer img {
+  padding: 0px 20px 0px 20px;
+}
