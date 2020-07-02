@@ -32,8 +32,9 @@ span {
   color: var(--grey);
 }
 
-
-header {}
+header {
+  background-color: var(--white);
+}
 
 .nav-wrapper {
   position: fixed;
@@ -263,6 +264,18 @@ button {
   outline-style: none;
 }
 
+#vegetarian-button {
+  background-color: var(--yellow);
+}
+
+#vegan-button {
+  background-color: var(--green);
+}
+
+#meat-button {
+  background-color: var(--middle-red);
+}
+
 button:active {
   background-color: var(--green);
   opacity: 0.9;
@@ -271,8 +284,55 @@ button:active {
 .footer {
   text-align: center;
   padding: 20px;
+  margin-top: 50px;
 }
 
-.footer img {
-  padding: 0px 20px 0px 20px;
+.footer a {
+  padding: 0px 20px;
+}
+
+/* Desktop View */
+
+@media only screen and (min-width: 830px) {
+
+  .countries-section {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    margin: 0 auto;
+    width: initial;
+    max-width: 1920px;
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: 1920px;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: initial;
+  }
+
+  #vegetarian,
+  #vegan,
+  #meat {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  #vegetarian .recipe-card,
+  #vegan .recipe-card,
+  #meat .recipe-card {
+    width: 50%;
+  }
 }
