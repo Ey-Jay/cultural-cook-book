@@ -1,9 +1,9 @@
 :root {
-  --grey: #50514F;
-  --green: #70FFAE;
-  --yellow: #FFEC5C;
-  --white: #FDFFF7;
-  --middle-red: #D7907B;
+  --grey: #50514f;
+  --green: #70ffae;
+  --yellow: #ffec5c;
+  --white: #fdfff7;
+  --middle-red: #d7907b;
 }
 
 html,
@@ -53,7 +53,6 @@ nav a {
   color: inherit;
 }
 
-
 .desktop-nav {
   display: none;
 }
@@ -72,8 +71,6 @@ nav a {
 .hide {
   display: none;
 }
-
-
 
 /* transform mobile burger to X */
 
@@ -106,7 +103,7 @@ nav a {
   height: 2px;
   margin: 6px 0;
   background-color: black;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 main h1 {
@@ -123,7 +120,6 @@ main h1 {
 .intro img {
   width: 30%;
   object-fit: contain;
-
 }
 
 .countries-section {
@@ -132,11 +128,9 @@ main h1 {
   align-items: center;
 }
 
-
 .countries-section.country-link {
   width: auto;
 }
-
 
 .country-card {
   position: relative;
@@ -156,7 +150,7 @@ main h1 {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -166,17 +160,17 @@ main h1 {
 }
 
 .country-card.colombia {
-  background: url('/assets/colombia.jpg') no-repeat;
+  background: url("/assets/colombia.jpg") no-repeat;
   background-size: cover;
 }
 
 .country-card.south-africa {
-  background: url('/assets/colombia.jpg') no-repeat;
+  background: url("/assets/colombia.jpg") no-repeat;
   background-size: cover;
 }
 
 .country-card.britain {
-  background: url('/assets/colombia.jpg') no-repeat;
+  background: url("/assets/colombia.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -206,7 +200,7 @@ main h1 {
 }
 
 .recipe-card .card-overlay {
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .recipe-card h2 {
@@ -214,10 +208,9 @@ main h1 {
 }
 
 .recipe-card.recipe1 {
-  background: url('/assets/dish.jpg') no-repeat;
+  background: url("/assets/dish.jpg") no-repeat;
   background-size: cover;
 }
-
 
 .card-label {
   padding: 5px 10px;
@@ -247,12 +240,10 @@ main h1 {
   background-color: cadetblue;
 } */
 
-
 .filter-buttons-container {
   border-bottom: 1px solid var(--grey);
   padding-bottom: 30px;
 }
-
 
 button {
   background-color: var(--green);
@@ -294,19 +285,42 @@ button:active {
 /* Desktop View */
 
 @media only screen and (min-width: 830px) {
-
-  .countries-section {
-    flex-direction: row;
-    gap: 10px;
+  .burger {
+    display: none;
   }
 
   .nav-wrapper {
+    position: relative;
     padding-left: 50px;
     padding-right: 50px;
-    position: relative;
     margin: 0 auto;
     width: initial;
     max-width: 1920px;
+
+    align-items: center;
+  }
+
+  .nav-wrapper a:hover {
+    background-color: var(--grey);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .desktop-nav {
+    display: initial;
+    /* width: 600px; */
+    /* margin: 0 5px; */
+    /* display: flex; */
+    /* flex-direction: row;
+    gap: 20px; */
+    /* width: 50px; */
+    /* margin: 0 5px; */
+  }
+
+  .desktop-nav a {
+    margin: 0 10px;
+    /* padding 0 10px; */
   }
 
   main {
@@ -314,12 +328,9 @@ button:active {
     max-width: 1920px;
   }
 
-  .burger {
-    display: none;
-  }
-
-  .desktop-nav {
-    display: initial;
+  .countries-section {
+    flex-direction: row;
+    gap: 10px;
   }
 
   #vegetarian,
