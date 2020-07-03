@@ -366,6 +366,10 @@ button:active {
     transition: transform 0.3s;
   }
 
+  .country-card:hover .card-overlay {
+    opacity: 1;
+  }
+
   .filter-buttons-container {
     display: none;
   }
@@ -392,5 +396,15 @@ button:active {
   .recipe-card:hover {
     transform: scale(1.1);
     transition: transform 0.3s;
+  }
+
+  .card-overlay {
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .recipe-card:hover .card-overlay {
+    opacity: 1;
+    transition: 0.3s;
   }
 }
