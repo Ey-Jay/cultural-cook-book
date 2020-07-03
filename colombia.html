@@ -4,6 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
@@ -15,13 +19,13 @@
   <header>
     <div class="outer-wrapper">
       <div class="nav-wrapper">
-        <a href="#"><img src=" /assets/logo.svg" alt="logo"></a>
+        <a href="#"><img src="assets/logo.svg" alt="logo"></a>
         <nav class="desktop-nav">
           <a href="./">Home</a>
           <a href="./colombia.html">Colombia</a>
-          <a href="./south-africa.html">South Africa</a>
-          <a href="./britain.html">Britain</a>
-          <a href="./my-favourite-recipes.html">My Recipes</a>
+          <a href="./south-africa">South Africa</a>
+          <a href="./britain">Britain</a>
+          <a href="./my-favourite-recipes">My Recipes</a>
         </nav>
         <div class="burger" onclick="transformBurgerToX(this)">
           <div class="burger-line1"></div>
@@ -35,16 +39,28 @@
     <h1>Cultural Cook Book</h1>
     <section class="introduction">
       <div class="intro">
-        <img src="/assets/cooking_lyxy.svg">
+        <img src="assets/cooking_lyxy.svg">
         <p>Experience culture through recipes!</p>
       </div>
     </section>
+    <section class="countries-section">
+      <a class="country-card colombia" href="./colombia.html">
 
-    <video width="320" height="240" controls>
-      <source src="assets/coverr.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
+        <div class="card-overlay">
+          <h2 class="country-card-title">Colombia</h2>
+        </div>
+      </a>
+      <a class="country-card south-africa" href="#">
+        <div class="card-overlay">
+          <h2 class="country-card-title">South Africa</h2>
+        </div>
+      </a>
+      <a class="country-card britain" href="#">
+        <div class="card-overlay">
+          <h2 class="country-card-title">Britain</h2>
+        </div>
+      </a>
+    </section>
     <section class="recipes-section">
       <h1>Top Recipes</h1>
       <div class="filter-buttons-container">
@@ -117,10 +133,10 @@
   <div class="mobile-nav hide">
   </div>
   <footer class="footer">
-    <a href=""><img src="/assets/facebook.svg"></a>
-    <a href=""><img src="/assets/instagram.svg"></a>
-    <a href=""><img src="/assets/twitter.svg"></a>
-    <a href=""><img src="/assets/youtube.svg"></a>
+    <a href=""><img src="assets/facebook.svg"></a>
+    <a href=""><img src="assets/instagram.svg"></a>
+    <a href=""><img src="assets/twitter.svg"></a>
+    <a href=""><img src="assets/youtube.svg"></a>
     <p>&#169 Copyright</p>
   </footer>
 </body>
