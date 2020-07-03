@@ -12,7 +12,11 @@ body {
 }
 
 main {
-  margin-top: 15vh;
+  margin-top: 80px;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -20,14 +24,14 @@ h2,
 h3,
 a,
 button {
-  font-family: "Futura", "Open Sans", sans-serif;
+  font-family: 'Futura', 'Open Sans', sans-serif;
   font-weight: normal;
   color: var(--grey);
 }
 
 p,
 span {
-  font-family: "Futura", "Open Sans", sans-serif;
+  font-family: 'Futura', 'Open Sans', sans-serif;
   font-weight: normal;
   color: var(--grey);
 }
@@ -36,20 +40,23 @@ header {
   background-color: var(--white);
 }
 
-.nav-wrapper {
+.outer-wrapper {
   position: fixed;
   top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--white);
+  box-shadow: 0 -5px 15px -1px rgba(0, 0, 0, 0.2);
+}
+
+.nav-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  box-shadow: 0 -5px 15px -1px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  background-color: var(--white);
 }
 
 nav a {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -109,16 +116,20 @@ nav a {
 main h1 {
   text-align: center;
 }
+.introduction,
+.countries-section,
+.recipes-section {
+  padding: 0 50px;
+}
 
 .introduction {
   text-align: center;
-  text-justify: center;
   color: white;
-  padding: 0 40px;
 }
 
 .intro img {
-  width: 30%;
+  width: 35%;
+  max-width: 150px;
   object-fit: contain;
 }
 
@@ -134,13 +145,10 @@ main h1 {
 
 .country-card {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
+
+  width: 100%;
+  max-width: 400px;
   height: 200px;
-  overflow: hidden;
   border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   margin: 15px 0;
@@ -148,29 +156,33 @@ main h1 {
 
 .card-overlay {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
-.country-card h2 {
+.country-card .card-overlay h2 {
   color: var(--white);
   z-index: 10;
 }
 
 .country-card.colombia {
-  background: url("/assets/colombia.jpg") no-repeat;
+  background: url('/assets/colombia.jpg') no-repeat;
   background-size: cover;
 }
 
 .country-card.south-africa {
-  background: url("/assets/colombia.jpg") no-repeat;
+  background: url('/assets/colombia.jpg') no-repeat;
   background-size: cover;
 }
 
 .country-card.britain {
-  background: url("/assets/colombia.jpg") no-repeat;
+  background: url('/assets/colombia.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -183,7 +195,8 @@ main h1 {
 #vegetarian,
 #vegan,
 #meat {
-  width: 80%;
+  max-width: 400px;
+  width: 100%;
 }
 
 .recipe-card {
@@ -200,15 +213,15 @@ main h1 {
 }
 
 .recipe-card .card-overlay {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.recipe-card h2 {
+.recipe-card .card-overlay h2 {
   z-index: 10;
 }
 
 .recipe-card.recipe1 {
-  background: url("/assets/dish.jpg") no-repeat;
+  background: url('/assets/dish.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -235,10 +248,6 @@ main h1 {
   background-color: var(--green);
   color: var(--grey);
 }
-
-/* .recipes-section {
-  background-color: cadetblue;
-} */
 
 .filter-buttons-container {
   border-bottom: 1px solid var(--grey);
@@ -273,9 +282,11 @@ button:active {
 }
 
 .footer {
+  background-color: var(--white);
   text-align: center;
   padding: 20px;
   margin-top: 50px;
+  box-shadow: 0 -1px 30px -15px rgba(0, 0, 0, 0.2);
 }
 
 .footer a {
@@ -289,61 +300,77 @@ button:active {
     display: none;
   }
 
-  .nav-wrapper {
+  .outer-wrapper {
     position: relative;
+  }
+
+  .nav-wrapper {
     padding-left: 50px;
     padding-right: 50px;
     margin: 0 auto;
     width: initial;
     max-width: 1920px;
-
     align-items: center;
+  }
+
+  .nav-wrapper a {
+    border-radius: 5px;
+    padding: 5px;
   }
 
   .nav-wrapper a:hover {
     background-color: var(--grey);
     color: var(--white);
-    border-radius: 5px;
-    padding: 5px;
   }
 
   .desktop-nav {
     display: initial;
-    /* width: 600px; */
-    /* margin: 0 5px; */
-    /* display: flex; */
-    /* flex-direction: row;
-    gap: 20px; */
-    /* width: 50px; */
-    /* margin: 0 5px; */
   }
 
-  .desktop-nav a {
-    margin: 0 10px;
-    /* padding 0 10px; */
+  .desktop-nav > a + a {
+    margin-left: 15px;
   }
 
   main {
-    margin: 0 auto;
+    margin: 50px auto;
     max-width: 1920px;
   }
 
+  .introduction,
+  .countries-section,
+  .recipes-section {
+    padding: 0 50px;
+  }
+
   .countries-section {
+    display: flex;
     flex-direction: row;
-    gap: 10px;
+    justify-content: center;
+  }
+
+  .countries-section > * + * {
+    margin-left: 25px;
+  }
+
+  .country-card {
+    width: 300px;
   }
 
   #vegetarian,
   #vegan,
   #meat {
+    max-width: none;
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: center;
   }
 
-  #vegetarian .recipe-card,
-  #vegan .recipe-card,
-  #meat .recipe-card {
-    width: 50%;
+  #vegetarian > * + *,
+  #vegan > * + *,
+  #meat > * + * {
+    margin-left: 25px;
+  }
+
+  .recipe-card {
+    width: 300px;
   }
 }
