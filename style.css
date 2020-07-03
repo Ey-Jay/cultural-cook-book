@@ -224,7 +224,7 @@ main h1 {
 }
 
 .recipe-card.recipe1 {
-  background: url('/assets/dish.jpg') no-repeat;
+  background: url('assets/dish.jpg') no-repeat;
   background-size: cover;
 }
 
