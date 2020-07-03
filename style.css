@@ -232,6 +232,7 @@ main h1 {
   right: 15px;
   border-radius: 5px;
   font-size: 0.8rem;
+  z-index: 99;
 }
 
 #meat .recipe-card .card-label {
