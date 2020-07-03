@@ -172,19 +172,19 @@ main h1 {
 }
 
 .country-card.colombia {
-  background: url('/assets/colombia.jpg') no-repeat;
+  background: url('assets/colombia.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .country-card.south-africa {
-  background: url('/assets/south-africa.jpg') no-repeat;
+  background: url('assets/south-africa.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .country-card.britain {
-  background: url('/assets/british.jpg') no-repeat;
+  background: url('assets/british.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
