@@ -173,6 +173,7 @@ main h1 {
 
 .country-card.colombia {
   background: url('/assets/colombia.jpg') no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -184,6 +185,7 @@ main h1 {
 
 .country-card.britain {
   background: url('/assets/british.jpg') no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
@@ -315,12 +317,12 @@ button:active {
     align-items: center;
   }
 
-  .nav-wrapper a {
+  .nav-wrapper nav a {
     border-radius: 5px;
     padding: 5px;
   }
 
-  .nav-wrapper a:hover {
+  .nav-wrapper nav a:hover {
     background-color: var(--grey);
     color: var(--white);
   }
@@ -356,6 +358,12 @@ button:active {
 
   .country-card {
     width: 300px;
+    transition: transform 0.3s;
+  }
+
+  .country-card:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
   }
 
   .filter-buttons-container {
@@ -378,5 +386,11 @@ button:active {
 
   .recipe-card {
     width: 300px;
+    transition: transform 0.3s;
+  }
+
+  .recipe-card:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
   }
 }
