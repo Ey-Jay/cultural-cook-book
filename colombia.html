@@ -35,34 +35,23 @@
       </div>
     </div>
   </header>
-  <main>
-    <h1>Cultural Cook Book</h1>
-    <section class="introduction">
-      <div class="intro">
-        <img src="assets/cooking_lyxy.svg">
-        <p>Experience culture through recipes!</p>
-      </div>
-    </section>
-    <section class="countries-section">
-      <a class="country-card colombia" href="./colombia.html">
-
-        <div class="card-overlay">
-          <h2 class="country-card-title">Colombia</h2>
-        </div>
-      </a>
-      <a class="country-card south-africa" href="#">
-        <div class="card-overlay">
-          <h2 class="country-card-title">South Africa</h2>
-        </div>
-      </a>
-      <a class="country-card britain" href="#">
-        <div class="card-overlay">
-          <h2 class="country-card-title">Britain</h2>
-        </div>
-      </a>
-    </section>
+  <div class="video-banner">
+    <video autoplay muted loop id="myVideo">
+      <source src="assets/coverr.mp4" type="video/mp4">
+    </video>
+    <div class="video-text-content">
+      <h1>Colombia</h1>
+      <p>Colombian cuisine is a compound of the culinary traditions of the six main regions within the country (Pacific,
+        Amazonian, Andean, Orinoco, Caribbean, and Insular). Colombian cuisine varies regionally and is particularly
+        influenced
+        by Indigenous Colombian, Spanish, and African cuisines, with slight Arab influence in some regions.
+        Furthermore, being one of the most biodiverse countries in the world, Colombia has one of the widest variety of
+        available ingredients depending on the region.</p>
+    </div>
+  </div>
+  <main style="margin-top: 0;">
+    <h1>Colombian Recipes</h1>
     <section class="recipes-section">
-      <h1>Top Recipes</h1>
       <div class="filter-buttons-container">
         <button id="vegetarian-button">Vegetarian</button>
         <button id="vegan-button">Vegan</button>
@@ -129,6 +118,31 @@
         </a>
       </div>
     </section>
+
+    <h1>Recipes From Other Countries</h1>
+    <section class="countries-section">
+      <a class="country-card colombia" href="./colombia.html">
+
+        <div class="card-overlay">
+          <h2 class="country-card-title">Colombia</h2>
+        </div>
+      </a>
+      <a class="country-card south-africa" href="#">
+        <div class="card-overlay">
+          <h2 class="country-card-title">South Africa</h2>
+        </div>
+      </a>
+      <a class="country-card britain" href="#">
+        <div class="card-overlay">
+          <h2 class="country-card-title">Britain</h2>
+        </div>
+      </a>
+    </section>
+
+
+
+
+
   </main>
   <div class="mobile-nav hide">
   </div>

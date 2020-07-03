@@ -40,6 +40,44 @@ header {
   background-color: var(--white);
 }
 
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-banner {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.video-text-content {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 25%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  height: 400px;
+  text-align: center;
+}
+
+.video-text-content > * {
+  margin: 0 auto 50px;
+  color: var(--white);
+  max-width: 1920px;
+}
+
+.video-text-content > h1 {
+  font-size: 75px;
+}
+
 .outer-wrapper {
   position: fixed;
   top: 0;
