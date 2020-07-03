@@ -357,6 +357,10 @@ button:active {
     width: 300px;
   }
 
+  .filter-buttons-container {
+    display: none;
+  }
+
   #vegetarian,
   #vegan,
   #meat {
