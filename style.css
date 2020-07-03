@@ -74,8 +74,16 @@ video {
   max-width: 1920px;
 }
 
-.video-text-content > h1 {
+.video-main-content {
+  display: flex;
+}
+
+.video-text-content h1 {
   font-size: 75px;
+}
+
+.video-text-content p {
+  width: 80%;
 }
 
 .outer-wrapper {
@@ -266,6 +274,19 @@ main h1 {
   background-size: cover;
 }
 
+.recipe-card.recipe-meat1 {
+  background: url('assets/meat1.jpg') no-repeat;
+  background-size: cover;
+}
+.recipe-card.recipe-meat2 {
+  background: url('assets/meat2.jpg') no-repeat;
+  background-size: cover;
+}
+.recipe-card.recipe-meat3 {
+  background: url('assets/meat3.jpg') no-repeat;
+  background-size: cover;
+}
+
 .card-label {
   padding: 5px 10px;
   position: absolute;
@@ -395,7 +416,7 @@ button:active {
   }
 
   .country-card {
-    width: 300px;
+    width: 200px;
     transition: transform 0.3s;
   }
 
