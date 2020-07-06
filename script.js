@@ -7,6 +7,23 @@ const vegetarianSection = document.getElementById('vegetarian');
 const veganSection = document.getElementById('vegan');
 const meatSection = document.getElementById('meat');
 
+const recipes = [{
+  id: 1001,
+  name: 'Curry',
+  img: 'assets/dish.jpg',
+  country: 'Colombia',
+  category: 'Meat',
+  ingredients: [{
+    meat: '500g'
+  }, {
+    onions: '2'
+  }, {
+    'curry-powder': '50g'
+  }],
+  instructions: 'Add this together and then This and then this and there it is'
+
+}]
+
 mobileBurger.addEventListener('click', () => {
   mobileNav.classList.toggle('hide');
 })

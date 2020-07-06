@@ -40,49 +40,44 @@ header {
   background-color: var(--white);
 }
 
-video {
+.banner video,
+.banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.video-banner {
+.banner {
   position: relative;
   height: 600px;
   overflow: hidden;
 }
 
-.video-text-content {
+.banner-text-content {
   position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(
-    0deg,
-    rgb(0, 0, 0) 25%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgb(0, 0, 0) 25%,
+      rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 400px;
   text-align: center;
 }
 
-.video-text-content > * {
+.banner-text-content>* {
   margin: 0 auto 50px;
   color: var(--white);
   max-width: 1920px;
 }
 
-.video-main-content {
-  display: flex;
-}
-
-.video-text-content h1 {
+.banner-text-content h1 {
   font-size: 75px;
 }
 
-.video-text-content p {
+.banner-text-content p {
   width: 80%;
 }
 
@@ -162,6 +157,7 @@ nav a {
 main h1 {
   text-align: center;
 }
+
 .introduction,
 .countries-section,
 .recipes-section {
@@ -235,6 +231,36 @@ main h1 {
   background-size: cover;
 }
 
+/* !POC ERICK */
+
+.poc-erick {
+  display: flex;
+}
+
+.c1 img {
+  width: 100px;
+}
+
+.c1 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.c1 {
+  width: 250px;
+  /* margin: 0 auto; */
+  padding: 20px;
+  grid-area: 1 / 1 / 2 / 2;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.c2 {
+  width: 100%;
+}
+
+/* !END POC ERICK */
+
 .recipes-section {
   display: flex;
   flex-direction: column;
@@ -278,10 +304,12 @@ main h1 {
   background: url('assets/meat1.jpg') no-repeat;
   background-size: cover;
 }
+
 .recipe-card.recipe-meat2 {
   background: url('assets/meat2.jpg') no-repeat;
   background-size: cover;
 }
+
 .recipe-card.recipe-meat3 {
   background: url('assets/meat3.jpg') no-repeat;
   background-size: cover;
@@ -390,7 +418,7 @@ button:active {
     display: initial;
   }
 
-  .desktop-nav > a + a {
+  .desktop-nav>a+a {
     margin-left: 15px;
   }
 
@@ -411,7 +439,7 @@ button:active {
     justify-content: center;
   }
 
-  .countries-section > * + * {
+  .countries-section>*+* {
     margin-left: 25px;
   }
 
@@ -441,9 +469,9 @@ button:active {
     justify-content: center;
   }
 
-  #vegetarian > * + *,
-  #vegan > * + *,
-  #meat > * + * {
+  #vegetarian>*+*,
+  #vegan>*+*,
+  #meat>*+* {
     margin-left: 25px;
   }
 
@@ -465,5 +493,199 @@ button:active {
   .recipe-card:hover .card-overlay {
     opacity: 1;
     transition: 0.3s;
+  }
+}
+
+
+
+
+
+
+
+/* Recipe Detail Page Styling */
+
+.recipe-detail-section {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  height: 800px;
+  background-color: grey;
+}
+
+.recipe-ingredients {
+  background-color: blue;
+  width: 100%;
+  height: 25%;
+}
+
+.recipe-steps {
+  background-color: red;
+  width: 100%;
+  height: 50%;
+}
+
+.recipe-share {
+  background-color: green;
+  width: 100%;
+  height: 25%;
+}
+
+
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Cooking steps */
+
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
   }
 }
