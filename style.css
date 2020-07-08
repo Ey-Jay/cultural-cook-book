@@ -104,7 +104,7 @@ header {
 }
 
 .nav-wrapper img {
-  width: 200px;
+  width: 130px;
 }
 
 nav a {
@@ -534,6 +534,11 @@ button:active {
     max-width: 1500px;
     align-items: center;
   }
+
+  
+.nav-wrapper img {
+  width: 200px;
+}
 
   .nav-wrapper nav a {
     border-radius: 5px;
