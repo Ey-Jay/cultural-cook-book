@@ -423,12 +423,31 @@ main h1 {
 
 #close-share {
   position: fixed;
-  /* right: -70%;
-  bottom: -80%; */
   right: 0;
   top: 0;
-  padding: 5px;
-  background-color: yellow;
+  padding: 15px;
+  box-shadow: none;
+}
+
+.close-share-line1,
+.close-share-line2 {
+  width: 30px;
+  height: 5px;
+  background-color: var(--grey);
+  border-radius: 5px;
+}
+
+.close-share-line1 {
+  transform: rotate(45deg) translate(4px, 2px);
+}
+
+.close-share-line2 {
+  transform: rotate(-45deg) translateX(1px);
+}
+
+#close-share:active .close-share-line1,
+#close-share:active .close-share-line2 {
+  background-color: var(--middle-red);
 }
 
 
@@ -615,7 +634,14 @@ button:active {
     margin: 0;
   }
 
+  #close-share:hover {
+    cursor: pointer;
+  }
 
+  #close-share:hover .close-share-line1,
+  #close-share:hover .close-share-line2 {
+    background-color: var(--middle-red);
+  }
 
 
 }
