@@ -63,15 +63,17 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(0deg,
-      rgb(0, 0, 0) 25%,
-      rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 25%,
+    rgba(255, 255, 255, 0) 100%
+  );
   width: 100%;
   height: 400px;
   text-align: center;
 }
 
-.banner-text-content>* {
+.banner-text-content > * {
   margin: 0 auto 50px;
   color: var(--white);
   max-width: 1920px;
@@ -320,7 +322,7 @@ main h1 {
   padding: 0 50px;
 }
 
-.recipe-detail-section>div+div {
+.recipe-detail-section > div + div {
   margin-top: 50px;
 }
 
@@ -342,7 +344,7 @@ main h1 {
   justify-content: space-between;
 }
 
-.recipe-ingredients>.ingredient-item+.ingredient-item {
+.recipe-ingredients > .ingredient-item + .ingredient-item {
   border-top: 1px solid var(--grey);
 }
 
@@ -358,7 +360,6 @@ main h1 {
   padding: 2px 4px;
 }
 
-
 .recipe-ingredients {
   width: 250px;
   margin: 0 auto;
@@ -370,7 +371,6 @@ main h1 {
 .recipe-steps {
   position: relative;
 }
-
 
 .recipe-steps img {
   width: 113px;
@@ -393,7 +393,6 @@ main h1 {
   background-color: var(--darkgreen);
   color: var(--white);
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -418,8 +417,14 @@ main h1 {
   border-radius: 5px;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
+.inner-share-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 #close-share {
   position: fixed;
@@ -427,6 +432,12 @@ main h1 {
   top: 0;
   padding: 15px;
   box-shadow: none;
+}
+
+.share-modal img {
+  height: 30px;
+  width: auto;
+  padding: 5px;
 }
 
 .close-share-line1,
@@ -449,9 +460,6 @@ main h1 {
 #close-share:active .close-share-line2 {
   background-color: var(--middle-red);
 }
-
-
-
 
 .filter-buttons-container {
   border-bottom: 1px solid var(--grey);
@@ -493,6 +501,12 @@ button:active {
   box-shadow: 0 -1px 30px -15px rgba(0, 0, 0, 0.2);
 }
 
+.footer.fourofour {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
 .footer a {
   padding: 0px 20px;
 }
@@ -531,7 +545,7 @@ button:active {
     display: initial;
   }
 
-  .desktop-nav>a+a {
+  .desktop-nav > a + a {
     margin-left: 15px;
   }
 
@@ -552,7 +566,7 @@ button:active {
     justify-content: center;
   }
 
-  .countries-section>*+* {
+  .countries-section > * + * {
     margin-left: 25px;
   }
 
@@ -582,9 +596,9 @@ button:active {
     justify-content: center;
   }
 
-  #vegetarian>*+*,
-  #vegan>*+*,
-  #meat>*+* {
+  #vegetarian > * + *,
+  #vegan > * + *,
+  #meat > * + * {
     margin-left: 25px;
   }
 
@@ -616,7 +630,7 @@ button:active {
     padding-bottom: 80px;
   }
 
-  .recipe-detail-section>div+div {
+  .recipe-detail-section > div + div {
     margin-top: initial;
   }
 
@@ -642,6 +656,4 @@ button:active {
   #close-share:hover .close-share-line2 {
     background-color: var(--middle-red);
   }
-
-
 }
