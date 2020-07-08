@@ -6,23 +6,10 @@ const meatButton = document.getElementById('meat-button');
 const vegetarianSection = document.getElementById('vegetarian');
 const veganSection = document.getElementById('vegan');
 const meatSection = document.getElementById('meat');
-
-const recipes = [{
-  id: 1001,
-  name: 'Curry',
-  img: 'assets/dish.jpg',
-  country: 'Colombia',
-  category: 'Meat',
-  ingredients: [{
-    meat: '500g'
-  }, {
-    onions: '2'
-  }, {
-    'curry-powder': '50g'
-  }],
-  instructions: 'Add this together and then This and then this and there it is'
-
-}]
+const shareButton = document.getElementById('share-button');
+const shareModal = document.querySelector('.share-modal');
+const modalOverlay = document.querySelector('.modal-overlay');
+const modalCloseButton = document.getElementById('close-share');
 
 mobileBurger.addEventListener('click', () => {
   mobileNav.classList.toggle('hide');
@@ -32,19 +19,48 @@ function transformBurgerToX(el) {
   el.classList.toggle('transform');
 }
 
+if (vegetarianButton) {
+  vegetarianButton.addEventListener('click', () => {
+    vegetarianSection.classList.remove('hide');
+    veganSection.classList.add('hide');
+    meatSection.classList.add('hide');
+  })
+}
 
-vegetarianButton.addEventListener('click', () => {
-  vegetarianSection.classList.remove('hide');
-  veganSection.classList.add('hide');
-  meatSection.classList.add('hide');
-})
-veganButton.addEventListener('click', () => {
-  veganSection.classList.remove('hide');
-  vegetarianSection.classList.add('hide');
-  meatSection.classList.add('hide');
-})
-meatButton.addEventListener('click', () => {
-  meatSection.classList.remove('hide');
-  veganSection.classList.add('hide');
-  vegetarianSection.classList.add('hide');
-})
+if (veganButton) {
+  veganButton.addEventListener('click', () => {
+    veganSection.classList.remove('hide');
+    vegetarianSection.classList.add('hide');
+    meatSection.classList.add('hide');
+  })
+}
+
+if (meatButton) {
+  meatButton.addEventListener('click', () => {
+    meatSection.classList.remove('hide');
+    veganSection.classList.add('hide');
+    vegetarianSection.classList.add('hide');
+  })
+}
+
+if (shareButton) {
+  shareButton.addEventListener('click', () => {
+    modalOverlay.classList.toggle('hide');
+    shareModal.classList.toggle('hide');
+    shareButton.classList.add('hide');
+  })
+  modalCloseButton.addEventListener('click', () => {
+    modalOverlay.classList.toggle('hide');
+    shareModal.classList.toggle('hide');
+    shareButton.classList.remove('hide');
+  })
+}
+
+
+if (modalOverlay) {
+  modalOverlay.addEventListener('click', () => {
+    modalOverlay.classList.toggle('hide');
+    shareModal.classList.toggle('hide');
+    shareButton.classList.remove('hide');
+  })
+}

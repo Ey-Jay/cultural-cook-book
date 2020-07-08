@@ -1,6 +1,9 @@
+/* Global Applicable */
+
 :root {
   --grey: #50514f;
   --green: #70ffae;
+  --darkgreen: #3ebe76;
   --yellow: #ffec5c;
   --white: #fdfff7;
   --middle-red: #d7907b;
@@ -339,12 +342,6 @@ main h1 {
   justify-content: space-between;
 }
 
-.recipe-steps img {
-  width: 113px;
-  display: block;
-  margin: 0 auto;
-}
-
 .recipe-ingredients>.ingredient-item+.ingredient-item {
   border-top: 1px solid var(--grey);
 }
@@ -369,6 +366,73 @@ main h1 {
   border-radius: 5px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+
+.recipe-steps {
+  position: relative;
+}
+
+
+.recipe-steps img {
+  width: 113px;
+  display: block;
+  margin: 0 auto;
+}
+
+.recipe-share {
+  border-top: 1px solid var(--grey);
+  text-align: center;
+  padding: 20px;
+}
+
+#share-button {
+  padding: 10px 50px;
+}
+
+#share-button:hover {
+  cursor: pointer;
+  background-color: var(--darkgreen);
+  color: var(--white);
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 8888;
+}
+
+.share-modal {
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
+  background-color: var(--green);
+  width: 70%;
+  height: 30%;
+  max-height: 200px;
+  max-width: 500px;
+  border-radius: 5px;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+
+#close-share {
+  position: fixed;
+  /* right: -70%;
+  bottom: -80%; */
+  right: 0;
+  top: 0;
+  padding: 5px;
+  background-color: yellow;
+}
+
+
+
 
 .filter-buttons-container {
   border-bottom: 1px solid var(--grey);
@@ -430,7 +494,7 @@ button:active {
     padding-right: 50px;
     margin: 0 auto;
     width: initial;
-    max-width: 1920px;
+    max-width: 1500px;
     align-items: center;
   }
 
@@ -543,10 +607,15 @@ button:active {
 
   .recipe-steps {
     grid-area: 1 / 2 / 2/ 3;
+    padding-bottom: 100px;
   }
 
   .recipe-steps img {
     display: initial;
     margin: 0;
   }
+
+
+
+
 }
