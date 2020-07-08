@@ -103,6 +103,10 @@ header {
   justify-content: space-between;
 }
 
+.nav-wrapper img {
+  width: 200px;
+}
+
 nav a {
   color: inherit;
 }
