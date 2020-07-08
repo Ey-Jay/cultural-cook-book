@@ -103,10 +103,6 @@ header {
   justify-content: space-between;
 }
 
-.nav-wrapper img {
-  width: 130px;
-}
-
 nav a {
   color: inherit;
 }
@@ -577,11 +573,6 @@ button:active {
     max-width: 1500px;
     align-items: center;
   }
-
-  
-.nav-wrapper img {
-  width: 200px;
-}
 
   .nav-wrapper nav a {
     border-radius: 5px;
