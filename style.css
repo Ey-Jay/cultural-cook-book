@@ -15,7 +15,7 @@ body {
 }
 
 main {
-  margin-top: 80px;
+  margin-top: 140px;
 }
 
 a {
@@ -53,7 +53,7 @@ header {
 
 .banner {
   position: relative;
-  height: 600px;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -63,17 +63,15 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(
-    0deg,
-    rgb(0, 0, 0) 25%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgb(0, 0, 0) 25%,
+      rgba(255, 255, 255, 0) 100%);
   width: 100%;
   height: 400px;
   text-align: center;
 }
 
-.banner-text-content > * {
+.banner-text-content>* {
   margin: 0 auto 50px;
   color: var(--white);
   max-width: 1920px;
@@ -101,6 +99,12 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper img {
+  width: 65px;
+  padding: 15px;
 }
 
 nav a {
@@ -112,7 +116,6 @@ nav a {
 }
 
 .mobile-nav {
-  position: relative;
   height: 100vh;
   background-color: var(--green);
   position: fixed;
@@ -120,6 +123,18 @@ nav a {
   top: 0;
   left: 0;
   z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav a {
+  font-size: 2rem;
+}
+
+.mobile-nav>a+a {
+  margin-top: 50px;
 }
 
 .hide {
@@ -364,7 +379,7 @@ main h1 {
   padding: 0 50px;
 }
 
-.recipe-detail-section > div + div {
+.recipe-detail-section>div+div {
   margin-top: 50px;
 }
 
@@ -386,7 +401,7 @@ main h1 {
   justify-content: space-between;
 }
 
-.recipe-ingredients > .ingredient-item + .ingredient-item {
+.recipe-ingredients>.ingredient-item+.ingredient-item {
   border-top: 1px solid var(--grey);
 }
 
@@ -580,15 +595,18 @@ button:active {
   }
 
   .nav-wrapper nav a:hover {
-    background-color: var(--grey);
-    color: var(--white);
+    border-top: 5px solid var(--yellow);
+  }
+
+  .nav-wrapper nav a.active {
+    border-top: 5px solid var(--yellow);
   }
 
   .desktop-nav {
     display: initial;
   }
 
-  .desktop-nav > a + a {
+  .desktop-nav>a+a {
     margin-left: 15px;
   }
 
@@ -603,13 +621,28 @@ button:active {
     padding: 0 50px;
   }
 
+  .banner {
+    height: 600px;
+  }
+
+  .underline-404 {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .home-url-404 {
+    padding: 5px;
+    background-color: var(--yellow);
+    border-radius: 5px;
+  }
+
   .countries-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 
-  .countries-section > * + * {
+  .countries-section>*+* {
     margin-left: 25px;
   }
 
@@ -639,9 +672,9 @@ button:active {
     justify-content: center;
   }
 
-  #vegetarian > * + *,
-  #vegan > * + *,
-  #meat > * + * {
+  #vegetarian>*+*,
+  #vegan>*+*,
+  #meat>*+* {
     margin-left: 25px;
   }
 
@@ -673,7 +706,7 @@ button:active {
     padding-bottom: 80px;
   }
 
-  .recipe-detail-section > div + div {
+  .recipe-detail-section>div+div {
     margin-top: initial;
   }
 
