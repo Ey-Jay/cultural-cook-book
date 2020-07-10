@@ -1,6 +1,7 @@
 /* Global: Mobile & Desktop */
 
 :root {
+  --black: #000000;
   --grey: #50514f;
   --green: #70ffae;
   --darkgreen: #3ebe76;
@@ -18,6 +19,10 @@ main {
   margin-top: 140px;
 }
 
+main h1 {
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -27,7 +32,7 @@ h2,
 h3,
 a,
 button {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: normal;
   color: var(--grey);
 }
@@ -35,7 +40,7 @@ button {
 p,
 span,
 li {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: normal;
   color: var(--grey);
 }
@@ -43,6 +48,8 @@ li {
 header {
   background-color: var(--white);
 }
+
+/* * Banner image and Video for country and recipe pages */
 
 .banner video,
 .banner img {
@@ -86,6 +93,8 @@ header {
 .banner-text-content p {
   width: 80%;
 }
+
+/* *Navigation styling */
 
 .outer-wrapper {
   position: fixed;
@@ -177,10 +186,6 @@ nav a {
   transition: 0.5s;
 }
 
-main h1 {
-  text-align: center;
-}
-
 .introduction,
 .countries-section,
 .recipes-section {
@@ -197,6 +202,8 @@ main h1 {
   max-width: 150px;
   object-fit: contain;
 }
+
+/* *Country cards */
 
 .countries-section {
   display: flex;
@@ -237,34 +244,36 @@ main h1 {
 }
 
 .country-card.colombia {
-  background: url("assets/colombia.jpg") no-repeat;
+  background: url('assets/colombia.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .country-card.south-africa {
-  background: url("assets/south-africa.jpg") no-repeat;
+  background: url('assets/south-africa.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .country-card.britain {
-  background: url("assets/british.jpg") no-repeat;
+  background: url('assets/british.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .country-card.italy {
-  background: url("assets/italy.jpg") no-repeat;
+  background: url('assets/italy.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .country-card.germany {
-  background: url("assets/germany.jpg") no-repeat;
+  background: url('assets/germany.jpg') no-repeat;
   background-position: center;
   background-size: cover;
 }
+
+/* *recipe card */
 
 .recipes-section {
   display: flex;
@@ -301,52 +310,52 @@ main h1 {
 }
 
 .recipe-card.recipe1 {
-  background: url("assets/dish.jpg") no-repeat;
+  background: url('assets/dish.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-veg1 {
-  background: url("assets/veg1.jpg") no-repeat;
+  background: url('assets/veg1.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-veg2 {
-  background: url("assets/veg2.jpg") no-repeat;
+  background: url('assets/veg2.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-veg3 {
-  background: url("assets/veg3.jpg") no-repeat;
+  background: url('assets/veg3.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-vegan1 {
-  background: url("assets/vegan1.jpg") no-repeat;
+  background: url('assets/vegan1.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-vegan2 {
-  background: url("assets/vegan2.jpg") no-repeat;
+  background: url('assets/vegan2.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-vegan3 {
-  background: url("assets/vegan3.jpg") no-repeat;
+  background: url('assets/vegan3.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-meat1 {
-  background: url("assets/meat1.jpg") no-repeat;
+  background: url('assets/meat1.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-meat2 {
-  background: url("assets/meat2.jpg") no-repeat;
+  background: url('assets/meat2.jpg') no-repeat;
   background-size: cover;
 }
 
 .recipe-card.recipe-meat3 {
-  background: url("assets/meat3.jpg") no-repeat;
+  background: url('assets/meat3.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -375,7 +384,7 @@ main h1 {
   color: var(--grey);
 }
 
-/* Recipe Detail Page Styling */
+/* *Recipe Detail Page Styling */
 
 .recipe-detail-section {
   padding: 0 50px;
@@ -571,7 +580,7 @@ button:active {
   padding: 0px 20px;
 }
 
-/* Desktop View */
+/* *Desktop View */
 
 @media only screen and (min-width: 830px) {
   .burger {
