@@ -438,7 +438,7 @@ nav a {
 }
 
 .ingredient-item ul li {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 .ingredient-item span {
@@ -778,10 +778,6 @@ button:active {
   .recipe-ingredients {
     width: 250px;
     grid-area: 1 / 1 / 2 / 2;
-  }
-
-  .ingredient-item ul li {
-    font-size: .85rem;
   }
 
   .recipe-ingredients img {
